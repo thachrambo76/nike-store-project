@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="../assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/file.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        section {
+            padding-top: 50px;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        section h1 {
+            font-weight: 1000;
+            font-family: var(--fonttitle);
+        }
+
+        section p {
+            font-weight: 400;
+            font-size: large;
+            font-family: var(--fonttitle);
+        }
+
+        video,
+        img {
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="h1-logo">
+                <a href="../assets/img/nikelogo2.png"><img src="../assets/img/nikelogo2.png" width="70px" alt=""></a>
+            </div>
+            <nav id="h2-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Men</a>
+                        <ul class="subnav">
+                            <li><a href="clothingmen.html">Clothing</a></li>
+                            <li><a href="shoemen.html">Shoes</a></li>
+                            <li><a href="accessoriesmen.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Women</a>
+                        <ul class="subnav">
+                            <li><a href="clothingwomen.html">Clothing</a></li>
+                            <li><a href="shoewomen.html">Shoes</a></li>
+                            <li><a href="accessorieswomen.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Kid</a>
+                        <ul class="subnav">
+                            <li><a href="clothingkid.html">Clothing</a></li>
+                            <li><a href="shoekid.html">Shoes</a></li>
+                            <li><a href="accessorieskid.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sitemap.html">SiteMap</a></li>
+                    <li><a href="service.html">Services</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="h3-info">
+                <ul>
+                    <li><a href="" class="ti-search"></a></li>
+                    <li><a href="" class="ti-shopping-cart"></a></li>
+                    <li><a href="" class="ti-menu"></a></li>
+                </ul>
+            </div>
+        </header>
+        <aside>
+            <span><a href="#" id="myBtn" onclick="document.getElementById('id01').style.display='block'"
+                    style="width:auto;">Login</a> | <a href="register.html" target="_blank">Register</a></span>
+        </aside>
+        <section>
+            <br>
+            <div>
+                <video width="500" height="240" autoplay muted loop>
+                    <source src="../assets/img/animation.mp4" type="video/mp4">
+                </video>
+                <h1>GIFTS THAT MOVE YOU</h1>
+                <p>This year's gift. Next year's greatness.</p>
+            </div>
+            <div>
+                <a href="#"><img src="../assets/img/img1.png" width="1200px" alt=""></a>
+                <br>
+            </div>
+        </section>
+        <modal>
+
+            <div id="id01" class="modal">
+
+                <form class="modal-content animate" action="" method="post">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                        <!-- <img src="/assets/img/t1.jpg" style="width: 200px;" alt="Avatar" class="avatar"> -->
+                        <img src="/assets/img/jordan.png" style="width: 100px;" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div style="margin-left: 20px;">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" class="form-control"
+                            style="width: 80%; margin-left: 20px;" required>
+                        <br>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" class="form-control "
+                            style="width: 80%; margin-left: 20px;" required>
+                        <br>
+                        <button type="submit" class="btn btn-success"
+                            style="width: 30%;margin-left: 30%;">Login</button><br>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <script>
+                var modal = document.getElementById('id01');
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+        </modal>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/file.js"></script>
+
+    <style>
+        section {
+            padding-top: 70px;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        h1,
+        .col-md-12 {
+            text-align: center;
+        }
+
+        #container {
+            margin-top: 50px;
+        }
+
+        h4 {
+            position: relative;
+            left: -50px;
+            top: -30px;
+        }
+
+        h3 {
+            position: relative;
+            left: -90px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="row">
+            <div class="col-md-12">
+                <video width="500" height="240" autoplay muted loop>
+                    <source src="../assets/img/animation.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center" style="font-weight: bold;">ĐĂNG KÝ TÀI KHOẢN</h1>
+                <button type="button" id="mybtn" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Đăng
+                    Ký</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="margin-left: 50px;width: 90%;">
+                <section class="table-responsive">
+                    <table class="table table-striped">
+                        <h4>THÔNG TIN ĐĂNG KÝ</h4>
+                        <thead>
+                            <tr>                            
+                                <th>STT</th>
+                                <th>Họ tên</th>
+                                <th>Tài khoản</th>
+                                <th>Mật khẩu</th>
+                                <th>Email</th>
+                                <th>Số điện thoại</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button style="margin-left: -10px;" type="button" class="close"
+                        data-dismiss="modal">&times;</button>
+                    <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+                </div>
+                <div style="margin-left: 10px;" class="modal-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtTen" class="control-label col-xs-3">Họ tên</label>
+                            <div class="col-md-9">
+                                <input style="width: 400px;" type="text" class="form-control" id="txtTen">
+                                <span id="tbTen" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtTaikhoan" class="control-label col-xs-3">Tài khoản</label>
+                            <div class="col-md-9">
+                                <input style="width: 400px;" type="text" class="form-control" id="txtTaikhoan">
+                                <span id="tbTaikhoan" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtMk" class="control-label col-xs-3">Mật khẩu</label>
+                            <div class="col-md-9">
+                                <input style="width: 400px;" type="password" class="form-control" id="txtMk">
+                                <span id="tbMk" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtE" class="control-label col-xs-3">Email</label>
+                            <div class="col-md-9">
+                                <input style="width: 400px;" type="text" class="form-control" id="txtE">
+                                <span id="tbE" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtSdt" class="control-label col-xs-3">Số điện thoại</label>
+                            <div class="col-md-9">
+                                <input style="width: 400px;" type="text" class="form-control" id="txtSdt">
+                                <span id="tbSdt" class="text-danger">*</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnSave" class="btn btn-success btn-block">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

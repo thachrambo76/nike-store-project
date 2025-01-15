@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="../assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/file.js"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/T1_esports_logo.svg.png">
+    <style>
+        section,th,td {
+            color: aliceblue;
+        }
+
+        #container {
+            background-color: black;
+        }
+
+        section {
+            margin-left: 30px;
+            padding-top: 50px;
+            width: 90%;
+            height: auto;
+            text-align: center;
+            height: 700px;
+        }
+
+        section #left {
+            float: left;
+            width: 50%;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        section #left ul {
+            list-style-type: none;
+        }
+
+        section #right {
+            float: right;
+            transform: rotateZ(-20deg);
+            z-index: 5;
+        }
+
+        section img {
+            position: relative;
+            top: -300px;
+            right: -200px;
+            width: 500px;
+            z-index: 5;
+            animation: animation 2s linear infinite alternate;
+        }
+
+        section #circle {
+            position: relative;
+            right: -70%;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(rgba(108, 108, 108, 0.596), #000);
+            /* background: linear-gradient(#acacac,#000); */
+            border-radius: 50%;
+        }
+
+        @keyframes animation {
+            0% {
+                /* transform:rotateZ(-20deg); */
+                transform: translateY(0);
+            }
+
+            100% {
+
+                transform: translateY(30px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="h1-logo">
+                <a href="../assets/img/nikelogo2.png"><img src="../assets/img/nikelogo2.png" width="70px" alt=""></a>
+            </div>
+            <nav id="h2-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Men</a>
+                        <ul class="subnav">
+                            <li><a href="clothingmen.html">Clothing</a></li>
+                            <li><a href="shoemen.html">Shoes</a></li>
+                            <li><a href="accessoriesmen.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Women</a>
+                        <ul class="subnav">
+                            <li><a href="clothingwomen.html">Clothing</a></li>
+                            <li><a href="shoewomen.html">Shoes</a></li>
+                            <li><a href="accessorieswomen.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Kid</a>
+                        <ul class="subnav">
+                            <li><a href="clothingkid.html">Clothing</a></li>
+                            <li><a href="shoekid.html">Shoes</a></li>
+                            <li><a href="accessorieskid.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sitemap.html">SiteMap</a></li>
+                    <li><a href="service.html">Services</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="h3-info">
+                <ul>
+                    <li><a href="" class="ti-search"></a></li>
+                    <li><a href="" class="ti-shopping-cart"></a></li>
+                    <li><a href="" class="ti-menu"></a></li>
+                </ul>
+            </div>
+        </header>
+        <section>
+            <br>
+            <div id="left">
+                <h2>GET HELP</h2>
+                <p>What can we help you with?</p><br>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>DISPATCH & DELIVERY</th>
+                            <th>RETURNS</th>
+                            <th>NIKE MEMBERSHIP
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>How do I get free delivery on Nike orders?</td>
+                            <td>How do I return my Nike order?</td>
+                            <td>What is Nike Membership?</td>
+                        </tr>
+                        <tr>
+                            <td>What are Nike's delivery options?</td>
+                            <td>What is Nike's returns policy?</td>
+                            <td>How do I become a Nike Member?</td>
+                        </tr>
+                        <tr>
+                            <td>Can my Nike order be dispatched internationally?
+                            </td>
+                            <td>Where is my refund?</td>
+                            <td>How do I get the most out of NRC and NTC?</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="circle"></div>
+            <div id="right"><img src="../assets/img/jd.webp" alt=""></div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="../assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/file.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 200px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fruit">
+        <header>
+            <div id="h1-logo">
+                <a href="../assets/img/nikelogo2.png"><img src="../assets/img/nikelogo2.png" width="70px" alt=""></a>
+            </div>
+            <nav id="h2-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Men</a>
+                        <ul class="subnav">
+                            <li><a href="clothingmen.html">Clothing</a></li>
+                            <li><a href="shoemen.html">Shoes</a></li>
+                            <li><a href="accessoriesmen.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Women</a>
+                        <ul class="subnav">
+                            <li><a href="clothingwomen.html">Clothing</a></li>
+                            <li><a href="shoewomen.html">Shoes</a></li>
+                            <li><a href="accessorieswomen.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Kid</a>
+                        <ul class="subnav">
+                            <li><a href="clothingkid.html">Clothing</a></li>
+                            <li><a href="shoekid.html">Shoes</a></li>
+                            <li><a href="accessorieskid.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sitemap.html">SiteMap</a></li>
+                    <li><a href="service.html">Services</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="h3-info">
+                <ul>
+                    <li><a href="" class="ti-search"></a></li>
+                    <li><a href="" class="ti-shopping-cart"></a></li>
+                    <li><a href="" class="ti-menu"></a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container" style="margin-top: 100px;">
+            <h2>Đặt Mua Giày</h2>
+            <form id="orderForm">
+                
+                <label for="quantity">Tên sản phẩm: </label>
+                <strong style="border: 1px solid;" id="productNameDisplay"></strong>
+                
+                <label for="quantity">Số lượng:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+                <label for="fullName">Họ và tên:</label>
+                <input style="height: 30px;" type="name" id="fullName" name="fullName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="button" onclick="submitOrder()">Đặt Mua</button>
+            </form>
+            <div id="orderResult"></div>
+        </div>
+        <script>
+            // Lấy giá trị từ URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get('productName');
+
+            // Hiển thị giá trị trong thanh tiêu đề của trang 2
+            document.title = `Nike - ${productName || 'Không xác định'}`;
+        </script>
+        <script>
+            // Hiển thị giá trị trong phần nội dung trang
+            const productNameDisplay = document.getElementById('productNameDisplay');
+            productNameDisplay.textContent = productName || 'Không xác định';
+        </script>
+        <script>
+            function submitOrder() {
+                // Lấy thông tin từ form
+                var quantity = document.getElementById("quantity").value;
+                var fullName = document.getElementById("fullName").value;
+                var email = document.getElementById("email").value;
+
+                // Kiểm tra thông tin hợp lệ
+                if (!quantity || !fullName || !email) {
+                    alert("Vui lòng điền đầy đủ thông tin");
+                    return;
+                }
+
+                // Xử lý logic đặt hàng ở đây (có thể gửi dữ liệu đến máy chủ, lưu vào cơ sở dữ liệu, vv.)
+
+                // Hiển thị thông báo đặt hàng thành công
+                var orderResultDiv = document.getElementById("orderResult");
+                orderResultDiv.innerHTML = `<p>Cảm ơn bạn đã đặt mua ${quantity} đôi ${productName}. Chúng tôi sẽ liên hệ với bạn qua email (${email}) để xác nhận đơn hàng.</p>`;
+            }
+        </script>
+
+
+</body>
+
+</html>
