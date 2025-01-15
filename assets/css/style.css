@@ -1,0 +1,242 @@
+:root{
+    --font: Helvetica, Arial, sans-serif;
+    --fonttitle: 'Brush Script MT', cursive;
+    --color: black;
+    --bgcolor: aliceblue;
+    --bghover: rgb(184, 213, 255);
+    --border-bottom: 2.5px solid black;
+}
+html{
+    font-family: var(--font);
+    /* background-color: rgb(207, 110, 110); */
+}
+#container{
+    background-color: rgb(200, 200, 200);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 50px;
+    line-height: 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--bgcolor);
+    z-index: 1;
+}
+header #h1-logo{
+    margin-left: 30px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+header #h1-logo:hover{
+    filter: opacity(70%);
+}
+header > #h2-nav > ul > li {
+    display: inline-block;
+}
+header #h2-nav ul li {
+    position: relative;
+    /* background-color: aliceblue; */
+}
+/* header #h2-nav ul li:hover a{
+    background-color: var(--backgroundcolor);
+} */
+header > #h2-nav > ul > li:hover > a{
+    /* background-color: var(--backgroundcolor); */
+    border-bottom: var(--border-bottom);
+    animation: ab 0.4s linear;
+}
+/* @keyframes ab {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+} */
+header #h2-nav ul li a{
+    text-decoration: none;
+    color: var(--color);
+    padding: 0 24px;
+    display: inline-block;
+}
+header #h2-nav ul li:hover .subnav{
+    display: block;
+}
+.subnav{
+    display: none;
+    min-width: 150px;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+header #h2-nav ul li .subnav{
+    position: absolute;
+    background-color: var(--bgcolor);
+}
+header #h2-nav ul li .subnav li:hover{
+    background-color: var(--bghover);
+}
+header #h3-info{
+    margin-right: 20px;
+    margin-top: 2.5px;
+}
+header #h3-info ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+header #h3-info ul li:hover a{
+    background-color: var(--bghover);
+    border-radius: 50%;
+    padding: 10px 10px;
+}
+header #h3-info ul li a{
+    text-decoration: none;
+    color: var(--color);
+    padding: 10px 10px;
+}
+aside{
+    width: 100%;
+    top: 50px;
+    position: relative;
+    position: fixed;
+}
+aside span{
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+aside a{
+    color: black;
+}
+aside a:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    /* border-radius: 50%; */
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  #main-content{
+    margin-top: 100px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 30%; 
+    border-radius: 20px;
+  }
+
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
